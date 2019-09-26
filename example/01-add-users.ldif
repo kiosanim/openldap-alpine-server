@@ -15,3 +15,12 @@ uid: 222222
 userpassword: f447b20a7fcbf53a5d5be013ea0b15af
 mail: oxto@bla.org
 description: Oxto
+
+dn: uid=systemx,ou=apps,dc=bla,dc=org
+objectclass: inetOrgPerson
+cn: System X
+sn: systemx
+uid: systemx
+userpassword: f447b20a7fcbf53a5d5be013ea0b15af
+mail: systemx@bla.org
+description: System's X User
