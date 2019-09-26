@@ -15,9 +15,12 @@ To run, export the variables as described below
 | LDAP_ADMIN | cn=admin | Admin User |
 | LDAP_ADMIN_PWD | pwd | Admin's Password |
 | LDAP_ACCESS_CONTROL | access to * by * read | Global Access Control |
-| LDAP_CA_FILE | /etc/ldap/ssl/cacert.pem | TLSCACertificateFile |
-| LDAP_CERT_FILE | /etc/ldap/ssl/servercrt.pem | TLSCertificateFile |
-| LDAP_KEY_FILE | /etc/ldap/ssl/serverkeyopen.pem | TLSCertificateKeyFile |
 | LDAP_LOG_LEVEL | 256 | LDAP's LOG LEVEL |
 | LDAP_PORT | 389 | LDAP SERVER's PORT |
+| LDAP_HOSTNAME | localhost | LDAP SERVER's HOSTNAME |
 | LDAPS_PORT | 636 | LDAPS SERVER's PORT |
+| LDAPS_CERT_SUBJ | /C=BR/ST=Bla State/L=Bla City/O=Bla Company/CN=ldap.bla.org | LDAP CERT's Subject " |
+| LDAPS_CA_FILE | /etc/ldap/ssl/cacert.pem | TLSCACertificateFile |
+| LDAPS_CERT_FILE | /etc/openldap/certs/server.crt | TLSCertificateFile |
+| LDAPS_KEY_FILE | /etc/openldap/certs/server.key | TLSCertificateKeyFile |
+

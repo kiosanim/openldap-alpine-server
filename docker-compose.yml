@@ -14,6 +14,10 @@ services:
       LDAP_PORT: 389
       LDAPS_PORT: 636
       LDAP_LOG_LEVEL: 256
+      LDAP_HOSTNAME: "localhost"
+      LDAPS_KEY_FILE: "/etc/openldap/certs/server.key"
+      LDAPS_CERT_FILE: "/etc/openldap/certs/server.crt"
+      LDAPS_CERT_SUBJ: "/C=BR/ST=Bla State/L=Bla City/O=Bla Company/CN=ldap.bla.org"
     tty: true
     stdin_open: true
     #volumes:
