@@ -21,11 +21,12 @@ services:
       LDAPS_CERT_SUBJ: "/C=BR/ST=Bla State/L=Bla City/O=Bla Company/CN=ldap.bla.org"
     tty: true
     stdin_open: true
-    #volumes:
-    #  - /var/lib/ldap
-    #  - /etc/ldap/slapd.d
-    #  - /container/service/slapd/assets/certs/
+    volumes:
+      - openldap_volume:/var/lib/openldap/openldap-data
     ports:
       - 389:389
       - 636:636
+volumes:
+  openldap_volume:
+    external: true
     

@@ -2,6 +2,12 @@
 # Author: Fábio Sartori <fabio@fabiosartori.info>
 A Simple OpenLDAP Container on Alpine Linux
 
+# Dependencies
+You have to create a volume called **openldap_volume**
+```bash
+docker volume create openldap_volume
+```
+
 # Variables
 
 To run, export the variables as described below
