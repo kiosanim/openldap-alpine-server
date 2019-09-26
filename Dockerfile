@@ -18,11 +18,9 @@ RUN apk add --update openldap openldap-back-mdb && \
 
 COPY scripts/* /etc/openldap/
 COPY entrypoint.sh /
-COPY whiletrue.sh /
 
 
 EXPOSE 389
 EXPOSE 636
 
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
-# ENTRYPOINT ["/whiletrue.sh"]
