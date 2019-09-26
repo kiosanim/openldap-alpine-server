@@ -1,0 +1,9 @@
+dn: uid=111111,ou=users,dc=bla,dc=org
+changetype: modify
+add: memberof
+memberOf: cn=grp_admin,ou=groups,dc=bla,dc=org
+
+dn: uid=222222,ou=users,dc=bla,dc=org
+changetype: modify
+add: memberof
+memberOf: cn=grp_common_users,ou=groups,dc=bla,dc=org

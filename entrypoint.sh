@@ -36,9 +36,13 @@ sed -i "s/@LDAP_ORGANIZATION@/${LDAP_ORGANIZATION}/g" "${BASE_LDIF}"
 sed -i "s/@LDAP_USERS_BASE_DN@/${LDAP_USERS_BASE_DN}/g" "${BASE_LDIF}"
 sed -i "s/@LDAP_GROUPS_BASE_DN@/${LDAP_GROUPS_BASE_DN}/g" "${BASE_LDIF}"
 
+# memberOf
+MEMBEROF_LDIF="/etc/openldap/memberof.ldif"
+
 ## Creating Base Tree
 
 slapadd -l "${BASE_LDIF}"
+slapadd -l "${MEMBEROF_LDIF}"
 
 ## Executing
 

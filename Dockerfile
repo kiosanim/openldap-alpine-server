@@ -12,7 +12,7 @@ ENV LDAP_LOG_LEVEL 256
 ENV LDAP_PORT 389
 ENV LDAPS_PORT 636
 
-RUN apk add --update openldap openldap-back-mdb && \
+RUN apk add --update openldap openldap-back-mdb openldap-overlay-memberof && \
     mkdir -p /run/openldap /var/lib/openldap/openldap-data && \
     rm -rf /var/cache/apk/*
 

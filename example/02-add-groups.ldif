@@ -1,0 +1,11 @@
+dn: cn=grp_admin,ou=groups,dc=bla,dc=org
+cn: grp_admin
+description: Admin users of Bla
+objectclass: groupofuniquenames
+uniquemember: uid=111111,ou=users,dc=bla,dc=org
+
+dn: cn=grp_common_users,ou=groups,dc=bla,dc=org
+cn: grp_common_users
+description: Users of Bla
+objectclass: groupofuniquenames
+uniquemember: uid=222222,ou=users,dc=bla,dc=org

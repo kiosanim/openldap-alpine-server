@@ -1,0 +1,17 @@
+dn: uid=111111,ou=users,dc=bla,dc=org
+objectclass: inetOrgPerson
+cn: Juvenal Otacílio
+sn: souza
+uid: 111111
+userpassword: f447b20a7fcbf53a5d5be013ea0b15af
+mail: juvenal@bla.org
+description: Juvenal
+
+dn: uid=222222,ou=users,dc=bla,dc=org
+objectclass: inetOrgPerson
+cn: Óxto Diones
+sn: oxto
+uid: 222222
+userpassword: f447b20a7fcbf53a5d5be013ea0b15af
+mail: oxto@bla.org
+description: Oxto
