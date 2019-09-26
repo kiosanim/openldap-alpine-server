@@ -12,6 +12,7 @@ To run, export the variables as described below
 | LDAP_SUFFIX | dc=bla,dc=org | Organization distinguished name |
 | LDAP_USERS_BASE_DN | ou=users,dc=bla,dc=org | User's Base DN |
 | LDAP_GROUPS_BASE_DN | ou=groups,dc=bla,dc=org | Groups's Base DN |
+| LDAP_APPS_BASE_DN | ou=apps,dc=bla,dc=org | System's Users Base DN |
 | LDAP_ADMIN | cn=admin | Admin User |
 | LDAP_ADMIN_PWD | pwd | Admin's Password |
 | LDAP_ACCESS_CONTROL | access to * by * read | Global Access Control |
@@ -57,5 +58,4 @@ To solve this, add set **TLS_REQCERT** to **never** on **/etc/openldap/ldap.conf
 #DEREF		never
 #TLS_REQCERT	demand
 TLS_REQCERT 	never
-
 ```

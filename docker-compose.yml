@@ -11,6 +11,7 @@ services:
       LDAP_ACCESS_CONTROL: "access to * by * read"
       LDAP_USERS_BASE_DN: "ou=users,dc=bla,dc=org"
       LDAP_GROUPS_BASE_DN: "ou=groups,dc=bla,dc=org"
+      LDAP_APPS_BASE_DN: "ou=apps,dc=bla,dc=org"
       LDAP_PORT: 389
       LDAPS_PORT: 636
       LDAP_LOG_LEVEL: 256
@@ -20,8 +21,7 @@ services:
       LDAPS_CERT_SUBJ: "/C=BR/ST=Bla State/L=Bla City/O=Bla Company/CN=ldap.bla.org"
     tty: true
     stdin_open: true
-    #volumes:
-    #  - /var/lib/ldap
+    # volumes:
     #  - /etc/ldap/slapd.d
     #  - /container/service/slapd/assets/certs/
     ports:

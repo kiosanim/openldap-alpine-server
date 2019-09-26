@@ -13,3 +13,8 @@ objectClass: organizationalUnit
 dn: @LDAP_GROUPS_BASE_DN@
 ou: groups
 objectClass: organizationalUnit
+
+# Apps
+dn: @LDAP_APPS_BASE_DN@
+ou: apps
+objectClass: organizationalUnit

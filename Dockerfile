@@ -9,6 +9,7 @@ ENV LDAP_ADMIN_PWD "123456"
 ENV LDAP_ACCESS_CONTROL "access to * by * read"
 ENV LDAP_USERS_BASE_DN "ou=users,dc=bla,dc=org"
 ENV LDAP_GROUPS_BASE_DN "ou=groups,dc=bla,dc=org"
+ENV LDAP_APPS_BASE_DN "ou=apps,dc=bla,dc=org"
 ENV LDAP_LOG_LEVEL 256
 ENV LDAP_PORT 389
 ENV LDAPS_PORT 636
