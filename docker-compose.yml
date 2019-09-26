@@ -1,0 +1,29 @@
+version: '2'
+services:
+  openldap:
+    image: fabiosartori/openldap-alpine-server:0.0.1
+    container_name: openldap-alpine-server
+    environment:
+      LDAP_ORGANIZATION: "Bla Ltd"
+      LDAP_SUFFIX: "dc=bla,dc=org"
+      LDAP_ADMIN: "cn=admin"
+      LDAP_ADMIN_PWD: "pwd"
+      LDAP_ACCESS_CONTROL: "access to * by * read"
+      LDAP_USERS_BASE_DN: "ou=users,dc=bla,dc=org"
+      LDAP_GROUPS_BASE_DN: "ou=groups,dc=bla,dc=org"
+      LDAP_PORT: 389
+      LDAPS_PORT: 636
+      LDAP_LOG_LEVEL: 256
+    tty: true
+    stdin_open: true
+    #volumes:
+    #  - /var/lib/ldap
+    #  - /etc/ldap/slapd.d
+    #  - /container/service/slapd/assets/certs/
+    ports:
+      # - "${LDAP_PORT}:${LDAP_PORT}"
+      # - "${LDAPS_PORT}:${LDAPS_PORT}"
+      - 389:389
+      - 636:636
+    #domainname: "example.org" # important: same as hostname
+    #hostname: "example.org"
