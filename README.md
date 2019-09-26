@@ -24,3 +24,38 @@ To run, export the variables as described below
 | LDAPS_CERT_FILE | /etc/openldap/certs/server.crt | TLSCertificateFile |
 | LDAPS_KEY_FILE | /etc/openldap/certs/server.key | TLSCertificateKeyFile |
 
+**ATENTION:** If LDAPS_CERT_FILE variable is provided, than the server will start only in **ldaps:///** mode, or else only in **ldap:///** mode
+
+# Errors
+
+## Self-signed Certificate
+If you received the error below on ldaps ldapsearch 
+
+```bash
+ldapsearch -v -x -D "cn=admin,dc=bla,dc=org" -W -H ldaps://ldap.bla.org -b "ou=users,dc=bla,dc=org" -s sub 'uid=juvenal'
+ldap_start_tls: Connect error (-11)
+    additional info: (unknown error code)
+Enter LDAP Password:
+ldap_result: Can't contact LDAP server (-1)
+```
+
+To solve this, add set **TLS_REQCERT** to **never** on **/etc/openldap/ldap.conf** file, as you can see below:
+
+```bash
+#
+# LDAP Defaults
+#
+
+# See ldap.conf(5) for details
+# This file should be world readable but not world writable.
+
+#BASE	dc=example,dc=com
+#URI	ldap://ldap.example.com ldap://ldap-master.example.com:666
+
+#SIZELIMIT	12
+#TIMELIMIT	15
+#DEREF		never
+#TLS_REQCERT	demand
+TLS_REQCERT 	never
+
+```

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -x
 #############################
 ## Entrypoint for openldap ##
 ## Author: Fábio Sartori   ##
@@ -64,6 +63,11 @@ slapadd -l "${MEMBEROF_LDIF}"
 
 ## Executing
 
-slapd -d "${LDAP_LOG_LEVEL}" -h "ldap:///"
+SLAPD_URL="ldap:///"
+
+test ${LDAPS_CERT_FILE} && SLAPD_URL="ldaps:///"
+    
+
+slapd -d "${LDAP_LOG_LEVEL}" -h "${SLAPD_URL}"
 
 exec "$@"

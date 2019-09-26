@@ -18,7 +18,6 @@ services:
       LDAPS_KEY_FILE: "/etc/openldap/certs/server.key"
       LDAPS_CERT_FILE: "/etc/openldap/certs/server.crt"
       LDAPS_CERT_SUBJ: "/C=BR/ST=Bla State/L=Bla City/O=Bla Company/CN=ldap.bla.org"
-
     tty: true
     stdin_open: true
     #volumes:
