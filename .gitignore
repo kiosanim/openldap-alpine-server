@@ -1,1 +1,3 @@
 cliente
+*.log
+.idea
