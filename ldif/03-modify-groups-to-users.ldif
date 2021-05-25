@@ -1,9 +1,0 @@
-dn: uid=111111,ou=users,dc=netrin,dc=com,dc=br
-changetype: modify
-add: memberof
-memberOf: cn=consulta_integrada_netrin_admin,ou=groups,dc=netrin,dc=com,dc=br
-
-dn: uid=222222,ou=users,dc=netrin,dc=com,dc=br
-changetype: modify
-add: memberOf
-memberOf: cn=consulta_integrada_user,ou=groups,dc=netrin,dc=com,dc=br
