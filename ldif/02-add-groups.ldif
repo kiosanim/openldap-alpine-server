@@ -1,0 +1,11 @@
+dn: cn=consulta_integrada_netrin_admin,ou=groups,dc=netrin,dc=com,dc=br
+cn: consulta_integrada_admin
+description: Perfil dos administradores da aplicação, estes poderão executar qualquer operação na aplicação
+objectclass: groupofuniquenames
+uniquemember: uid=111111,ou=users,dc=netrin,dc=com,dc=br
+
+dn: cn=consulta_integrada_user,ou=groups,dc=netrin,dc=com,dc=br
+cn: consulta_integrada_netrin_user
+description: Perfil dos usuários do sistema de consulta integrada
+objectclass: groupofuniquenames
+uniquemember: uid=222222,ou=users,dc=netrin,dc=com,dc=br

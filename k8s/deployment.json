@@ -2,20 +2,32 @@
   "apiVersion": "apps/v1",
   "kind": "Deployment",
   "metadata": {
+<<<<<<< HEAD
     "name": "bla-openldap-server"
+=======
+    "name": "netrin-openldap-server"
+>>>>>>> f7e185d8ce7f171ba67204d4928ebd3dfc1f0243
   },
   "spec": {
     "replicas": 1,
     "selector": {
       "matchLabels": {
+<<<<<<< HEAD
         "app": "bla-openldap-server"     
+=======
+        "app": "netrin-openldap-server"     
+>>>>>>> f7e185d8ce7f171ba67204d4928ebd3dfc1f0243
       }
     },
     
     "template": {
       "metadata": {
         "labels": {
+<<<<<<< HEAD
           "app": "bla-openldap-server"
+=======
+          "app": "netrin-openldap-server"
+>>>>>>> f7e185d8ce7f171ba67204d4928ebd3dfc1f0243
         }
       },
       "spec": {
@@ -30,7 +42,11 @@
         ],
         "containers": [
           {
+<<<<<<< HEAD
             "name": "bla-openldap-pod",
+=======
+            "name": "netrin-openldap-pod",
+>>>>>>> f7e185d8ce7f171ba67204d4928ebd3dfc1f0243
             "image": "fabiosartori/openldap-alpine-server:latest",
             "ports": [
               {
@@ -45,7 +61,11 @@
             "envFrom": [
               {
                "configMapRef": {
+<<<<<<< HEAD
                     "name": "bla-configmap"
+=======
+                    "name": "netrin-configmap"
+>>>>>>> f7e185d8ce7f171ba67204d4928ebd3dfc1f0243
                 }
               }
             ],
