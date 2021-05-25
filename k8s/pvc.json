@@ -1,0 +1,20 @@
+{
+	"apiVersion": "v1",
+	"kind": "PersistentVolumeClaim",
+	"metadata": {
+		"namespace": "bla",
+		"name": "ldap-claim"
+	},
+	"spec": {
+		"accessModes": [
+			"ReadWriteOnce"
+		],
+		"storageClassName": "",
+		"volumeMode": "Filesystem",
+		"resources": {
+			"requests": {
+				"storage": "100Mi"
+			}
+		}
+	}
+}
