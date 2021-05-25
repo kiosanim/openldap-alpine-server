@@ -1,0 +1,63 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "netrin-openldap-server"
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "netrin-openldap-server"     
+      }
+    },
+    
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "netrin-openldap-server"
+        }
+      },
+      "spec": {
+        "restartPolicy": "Always",
+        "volumes": [
+          {
+            "name": "ldap-volume",
+            "persistentVolumeClaim": {
+              "claimName": "ldap-claim"
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "netrin-openldap-pod",
+            "image": "fabiosartori/openldap-alpine-server:latest",
+            "ports": [
+              {
+                "name": "ldap",
+                "containerPort": 389  
+              },
+              {
+                "name": "ldaps",
+                "containerPort": 636  
+              }
+            ],
+            "envFrom": [
+              {
+               "configMapRef": {
+                    "name": "netrin-configmap"
+                }
+              }
+            ],
+            "volumeMounts": [
+              {
+                "mountPath": "/var/lib/openldap/openldap-data",
+                "name": "ldap-volume" 
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+dn: uid=111111,ou=users,dc=netrin,dc=com,dc=br
+objectclass: inetOrgPerson
+cn: Usuario 111111
+sn: ssss
+uid: 111111
+userpassword: f447b20a7fcbf53a5d5be013ea0b15af
+mail: 111111@netrin.com.br
+description: Desc Usuario 111111
+
+dn: uid=222222,ou=users,dc=netrin,dc=com,dc=br
+objectclass: inetOrgPerson
+cn: Usuario 222222
+sn: ssss
+uid: 222222
+userpassword: f447b20a7fcbf53a5d5be013ea0b15af
+mail: 222222@empresa-xpto.com.br
+description: Desc Usuario 222222
+
+#####################
+
+# PWD qwerty
+dn: uid=rbac,ou=apps,dc=netrin,dc=com,dc=br
+objectclass: inetOrgPerson
+cn: RBAC System's user
+sn: rbac
+uid: rbac
+userpassword: {SSHA}92dL5FJD3bc2BbMZ13WNTt/yZZ9X/g1o
+mail: rbac@netrin.com.br
+description: RBAC's User
