@@ -2,11 +2,11 @@
   "apiVersion": "v1",
   "kind": "Service",
   "metadata": {
-    "name": "netrin-openldap-service"
+    "name": "bla-openldap-service"
   },
   "spec": {
     "selector": {
-      "app": "netrin-openldap-server"
+      "app": "bla-openldap-server"
     },
     "type": "NodePort",
     "ports":[
